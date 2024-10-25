@@ -1,0 +1,16 @@
+public class Enhancedplay{
+	public static void main(String...args){
+
+	int [] numbers = {1, 2, 10, 45, 20};
+
+	for(int value : numbers){
+
+		System.out.println(numbers);
+
+
+}
+
+
+}
+
+}
