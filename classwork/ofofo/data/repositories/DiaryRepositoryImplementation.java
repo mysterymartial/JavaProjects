@@ -1,16 +1,25 @@
 package repositories;
 
 import models.Diary;
+import models.Entry;
 
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class DiaryRepositoryImplementation implements DiaryRepository {
     private final List<Diary> diaries = new ArrayList<>();
     @Override
     public void save(Diary diary) {
-        diaries.add(diary);
+        Diary existingDiary = findUserName(diary.getUserName());
+        if (existingDiary != null) {
+            updateDiary(diary, existingDiary);
+
+        }else {
+            diaries.add(diary);
+
+        }
 
 
     }
@@ -23,6 +32,12 @@ public class DiaryRepositoryImplementation implements DiaryRepository {
             }
         }
         return null;
+    }
+    private void updateDiary(Diary existingDiary, Diary newDiary) {
+        existingDiary.setPassword(newDiary.getPassword());
+        existingDiary.setEntries(newDiary.getEntries());
+        existingDiary.setLocked(newDiary.isLocked());
+
     }
 
     @Override
@@ -55,6 +70,11 @@ public class DiaryRepositoryImplementation implements DiaryRepository {
                 });
 
 
+    }
+
+    @Override
+    public long diaryCount() {
+        return diaries.stream().count();
     }
 
 

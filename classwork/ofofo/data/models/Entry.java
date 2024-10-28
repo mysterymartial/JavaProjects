@@ -15,6 +15,11 @@ public class Entry {
         this.dateCreated = LocalDateTime.now();
 
     }
+    public void setDateCreated(LocalDateTime dateCreated) {
+        this.dateCreated = dateCreated;
+
+    }
+
     public int getId() {
         return id;
     }

@@ -7,7 +7,7 @@ import java.util.List;
 public class Diary {
     private String userName;
     private String password;
-    private boolean isLocked = false;
+    private boolean isLocked = true;
     private List<Entry> entries = new ArrayList<Entry>();
     private String title;
     private String description;
@@ -30,6 +30,20 @@ public class Diary {
     public String getPassword() {
         return password;
     }
+    public List<Entry> getEntries() {
+        return entries;
+    }
+    public void setEntries(List<Entry> entries) {
+        this.entries = entries;
+    }
+
+    public void setLocked(boolean locked) {
+        isLocked = locked;
+    }
+    public boolean getLocked() {
+        return isLocked;
+    }
+
     public void setPassword(String password) {
         this.password = password;
     }

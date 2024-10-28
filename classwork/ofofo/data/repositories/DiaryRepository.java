@@ -8,4 +8,5 @@ public interface DiaryRepository {
     void deleteByUserName(String userName);
     void deleteByTitle(String title);
     void updateEntry(int id, String newTitle, String newBody);
+    long diaryCount();
 }

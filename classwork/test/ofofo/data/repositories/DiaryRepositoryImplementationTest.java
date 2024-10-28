@@ -17,10 +17,14 @@ public class DiaryRepositoryImplementationTest {
 
     }
     @Test
-    public void testtoSaveEntriesInDB() throws Exception {
+    public void testtoSaveEntriesInDBAndCheckIfTheSaveMethodUpdates() throws Exception {
         Diary diary = new Diary("alice","nak");
         repo.save(diary);
         assertNotNull(repo.findUserName("alice"));
+        diary.setPassword("fuck");
+        repo.save(diary);
+        assertNotNull(repo.findUserName("alice"));
+        assertEquals("fuck", repo.findUserName("alice").getPassword());
 
     }
     @Test
