@@ -1,10 +1,13 @@
 package ofofo.data.repositories;
 
+import models.Diary;
 import models.Entry;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import repositories.EntryRepository;
 import repositories.EntryRepositoryImplementation;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -67,4 +70,13 @@ public class EntryRepositoryImplementationTest {
         assertEquals("Second Body", entry1.getBody());
 
     }
+    @Test
+    public void testFindEntriesByTitleFunctionality() {
+        Entry entry1 = new Entry(1, "First Title", "First Body");
+        entryRepository.save(entry1);
+        assertNotNull(entry1);
+        assertEquals("First Title", entry1.getTitle());
+        assertNull(entryRepository.findByTitle("Non Existent Title"));
+    }
+
 }

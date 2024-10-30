@@ -1,12 +1,16 @@
 package repositories;
-
 import models.Diary;
+import models.Entry;
+
+import java.util.List;
 
 public interface DiaryRepository {
     void save(Diary diary);
     Diary findUserName(String userName);
     void deleteByUserName(String userName);
-    void deleteByTitle(String title);
-    void updateEntry(int id, String newTitle, String newBody);
+    void updateEntry(int diaryId, int entryId, String newTitle, String newBody);
     long diaryCount();
+    Entry getByDiaryIdAndEntryId(int id,int DiaryId);
+    List<Entry> FindAllEntriesInADiary(int diaryId);
+    List<Diary>findAll();
 }

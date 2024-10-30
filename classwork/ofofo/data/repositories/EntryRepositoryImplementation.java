@@ -33,6 +33,15 @@ public class EntryRepositoryImplementation implements EntryRepository {
     }
 
     @Override
+    public Entry findByTitle(String title) {
+        return entries.stream()
+                .filter(entry -> entry.getTitle() == title)
+                .findFirst()
+                .orElse(null);
+
+    }
+
+    @Override
     public void updateById(int id, String newtitle, String newbody) {
         Entry entry = findById(id);
         if (entry != null) {
@@ -58,4 +67,8 @@ public class EntryRepositoryImplementation implements EntryRepository {
     public List<Entry> findAll() {
         return entries;
     }
+
+
+
+
 }

@@ -53,20 +53,20 @@ public class DiaryRepositoryImplementation implements DiaryRepository {
 
     }
 
-    @Override
-    public void deleteByTitle(String title) {
-        diaries.removeIf(diary -> diary.getTitle().equals(title));
 
-    }
+
+
 
     @Override
-    public void updateEntry(int id, String newTitle, String newBody) {
+    public void updateEntry(int diaryid,int entryId, String newTitle, String newBody) {
         diaries.stream()
-                .filter(diary -> diary.getId() == id)
+                .filter(diary -> diary.getdiaryId() == entryId)
+                .flatMap(diary -> diary.getEntries().stream())
+                .filter(entry -> entry.getId() == entryId)
                 .findFirst()
-                .ifPresent(diary -> {
-                    diary.setTitle(newTitle);
-                    diary.setDescription(newBody);
+                .ifPresent(entry -> {
+                    entry.setTitle(newTitle);
+                    entry.setBody(newBody);
                 });
 
 
@@ -75,6 +75,30 @@ public class DiaryRepositoryImplementation implements DiaryRepository {
     @Override
     public long diaryCount() {
         return diaries.stream().count();
+    }
+
+    @Override
+    public Entry getByDiaryIdAndEntryId(int id, int diaryId) {
+        return diaries.stream()
+                .filter(diary -> diary.getdiaryId() == diaryId)
+                .flatMap(diary ->diary.getEntries().stream())
+                .filter(entry -> entry.getId() == id)
+                .findFirst()
+                .orElse(null);
+
+    }
+
+    @Override
+    public List<Entry> FindAllEntriesInADiary(int diaryId) {
+        Optional<Diary> diary = diaries.stream()
+                .filter(myDiary -> myDiary.getdiaryId() == diaryId)
+                .findFirst();
+        return diary.map(Diary::getEntries).orElse(new ArrayList<>());
+    }
+
+    @Override
+    public List<Diary> findAll() {
+        return new ArrayList<>(diaries);
     }
 
 

@@ -11,7 +11,7 @@ public class Diary {
     private List<Entry> entries = new ArrayList<Entry>();
     private String title;
     private String description;
-    private int id;
+    private int diaryId;
 
     public Diary(String userName, String password) {
         this.userName = userName;
@@ -71,10 +71,10 @@ public class Diary {
     }
 
 
-    public int getId() {
-        return id;
+    public int getdiaryId() {
+        return diaryId;
     }
-    public void setId(int id) {
-        this.id = id;
+    public void setdiaryId(int diaryId) {
+        this.diaryId = diaryId;
     }
 }

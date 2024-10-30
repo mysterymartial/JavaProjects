@@ -1,9 +1,13 @@
 package ofofo.data.repositories;
 
 import models.Diary;
+import models.Entry;
 import org.junit.jupiter.api.Test;
 import repositories.DiaryRepositoryImplementation;
 import org.junit.jupiter.api.BeforeEach;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -40,25 +44,73 @@ public class DiaryRepositoryImplementationTest {
         repo.deleteByUserName("biko");
         assertNull(repo.findUserName("biko"));
     }
-    @Test
-    public void testDeleteByTitle() throws Exception {
-       Diary diary = new Diary("alice","nak");
-       diary.setTitle("Boyfriend");
-       diary.setDescription("i kissed that stupid boy");
-       repo.save(diary);
-       repo.deleteByTitle("Boyfriend");
-       assertNull(repo.findUserName("alice"));
 
-    }
     @Test
     public void testUpdateEntriesInTheDiary() throws Exception {
         Diary diary = new Diary("alice","nak");
-        diary.setTitle("Boyfriend");
-        diary.setDescription("i kissed that stupid boy");
+        diary.setdiaryId(1);
+        Entry entry = new Entry(1,"Boy Friend","i dont love that girl");
+        List<Entry> entries = new ArrayList<>();
+        entries.add(entry);
+        diary.setEntries(entries);
         repo.save(diary);
-        repo.updateEntry(diary.getId(),"upadate title","upadated body");
-        Diary foundDiary = repo.findUserName("alice");
-        assertEquals("upadate title", foundDiary.getTitle());
-        assertEquals("upadated body", foundDiary.getDescription());
+        repo.updateEntry(1,1,"Girl Friend","i love that girl");
+        Entry updatededEntry = repo.getByDiaryIdAndEntryId(1,1);
+        assertNotNull(updatededEntry);
+        assertEquals("Girl Friend",updatededEntry.getTitle());
+        assertEquals("i love that girl",updatededEntry.getBody());
+    }
+    @Test
+    public void testFindBYDiaryIdAndEntryIdFound() {
+        Diary diary = new Diary("alice","nak");
+        diary.setdiaryId(1);
+        Entry entry1 = new Entry(1,"my boy","i love you");
+        Entry entry2 = new Entry(2,"my girl","i love you");
+        List<Entry> entries = new ArrayList<>();
+        entries.add(entry1);
+        entries.add(entry2);
+        diary.setEntries(entries);
+        repo.save(diary);
+        Entry result = repo.getByDiaryIdAndEntryId(1,1);
+        assertNotNull(result);
+        assertEquals("my boy",result.getTitle());
+    }
+    @Test
+    public void testFindByDiaryIdAndEntryId()  {
+        Diary diary = new Diary("alice","nak");
+        diary.setdiaryId(1);
+        Entry entry1 = new Entry(1,"my boy","i love you");
+        Entry entry2 = new Entry(2,"my girl","i love you");
+        List<Entry> entries = new ArrayList<>();
+        entries.add(entry1);
+        entries.add(entry2);
+        diary.setEntries(entries);
+        repo.save(diary);
+        Entry result = repo.getByDiaryIdAndEntryId(999,1);
+        assertNull(result);
+        Entry result2 = repo.getByDiaryIdAndEntryId(1,999);
+    }
+    @Test
+    public void testToFindAllEntriesInADiary()  {
+            Diary diary1 = new Diary("alice","nak");
+            diary1.setdiaryId(1);
+            Diary diary2 = new Diary("Fat Boy","suck");
+            diary2.setdiaryId(2);
+            Entry entry1 = new Entry(1, "First Title", "First Body");
+            Entry entry2 = new Entry(2, "Second Title", "Second Body");
+            diary1.setEntries(List.of(entry1, entry2));
+            Entry entry3 = new Entry(3, "Third Title", "Third Body");
+            diary2.setEntries(List.of(entry3));
+            repo.save(diary2);
+            repo.save(diary1);
+            List <Entry> diary1Entries = repo.FindAllEntriesInADiary(1);
+            assertEquals(2, diary1Entries.size());
+            assertTrue(diary1Entries.contains(entry1));
+            assertTrue(diary1Entries.contains(entry2));
+            List <Entry> diary2Entries = repo.FindAllEntriesInADiary(2);
+            assertEquals(1, diary2Entries.size());
+            assertTrue(diary2Entries.contains(entry3));
+            List <Entry> entryNotExisting = repo.FindAllEntriesInADiary(3);
+            assertTrue(entryNotExisting.isEmpty());
     }
 }
