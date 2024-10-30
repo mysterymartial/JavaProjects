@@ -5,6 +5,8 @@ import models.Entry;
 import repositories.DiaryRepository;
 import repositories.DiaryRepositoryImplementation;
 
+import java.util.Optional;
+
 public class DiaryServiceImplementation implements DiaryServices{
     private DiaryRepository diaryRepository = new DiaryRepositoryImplementation();
     private String currentUser;
