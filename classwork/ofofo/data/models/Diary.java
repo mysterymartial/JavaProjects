@@ -11,7 +11,7 @@ public class Diary {
     private List<Entry> entries = new ArrayList<Entry>();
     private String title;
     private String description;
-    private int diaryId;
+    private String diaryId;
 
     public Diary(String userName, String password) {
         this.userName = userName;
@@ -34,7 +34,7 @@ public class Diary {
         return entries;
     }
     public void setEntries(List<Entry> entries) {
-        this.entries = entries;
+        this.entries = new ArrayList<>(entries);
     }
 
     public void setLocked(boolean locked) {
@@ -71,10 +71,10 @@ public class Diary {
     }
 
 
-    public int getdiaryId() {
+    public String getdiaryId() {
         return diaryId;
     }
-    public void setdiaryId(int diaryId) {
+    public void setdiaryId(String diaryId) {
         this.diaryId = diaryId;
     }
 }
