@@ -6,23 +6,31 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import repositories.EntryRepository;
 import repositories.EntryRepositoryImplementation;
+import service.EntryServices;
 import service.EntryServicesImplementation;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class EntryServiceTest {
-    private EntryServicesImplementation entryServices;
-    private EntryRepository entryRepository;
+    private EntryServices service;
 
     @BeforeEach
     public void setUp() throws Exception {
-        entryRepository = new EntryRepositoryImplementation();
-        entryServices = new EntryServicesImplementation();
-
-
+        service = new EntryServicesImplementation();
     }
-//    @Test
-//    public void testAddEntry() {
-//        Entry entry = new Entry("first title","crazy boy",1);
-//        Entry entry2 = new Entry("second title","crazy boy",2);
-//        entryServices.addEntry(entry);
-//    }
+    @Test
+    public void testThatEntryCanBeCreated() {
+        assertEquals("Entry created", service.createEntry("title","body",1));
+    }
+    @Test
+    public void testThatEntryCanBeUpdated() {
+        service.createEntry("title","body",1);
+        assertEquals("Entry Successfully Updated", service.updateEntry(1,"new title","new body"));
+    }
+    @Test
+    public void testYouCanFindAllEntries() {
+        service.createEntry("title","body",1);
+        assertTrue(service.getAllEntries().contains("title"));
+    }
 }

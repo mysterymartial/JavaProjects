@@ -2,117 +2,107 @@ package service;
 
 import models.Diary;
 import models.Entry;
+import repositories.DiaryRepository;
 import repositories.DiaryRepositoryImplementation;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-public class DiaryServiceImplementation implements DiaryServices{
-    private DiaryRepositoryImplementation diaryRepository = new DiaryRepositoryImplementation();
-    private String currentDiaryId;
-    private Map<String,String> userDiaryId = new HashMap<>();
+public class DiaryServiceImplementation implements DiaryServices {
+    private final DiaryRepository diaryRepository;
+    private Diary currentUser = null;
+    private int entryIdCounter = 0;
+    public DiaryServiceImplementation() {
+        this.diaryRepository = new DiaryRepositoryImplementation();
+    }
+
     @Override
-    public void register(String userName, String password) {
+    public String register(String userName, String password) {
         if(diaryRepository.findUserName(userName) != null) {
-            throw new IllegalArgumentException("User already exists");
+            throw new IllegalArgumentException("Username already exists");
         }
-        Diary diary = new Diary(userName, password);
-        diary.setdiaryId(generateDiaryId());
-        diaryRepository.save(diary);
-        currentDiaryId = diary.getdiaryId();
-        userDiaryId.put(userName, currentDiaryId);
+
+        diaryRepository.save(new Diary(userName, password));
+
+        return "Diary registered successfully";
     }
 
     @Override
-    public boolean login(String userName, String password) {
+    public String login(String userName, String password) {
         Diary diary = diaryRepository.findUserName(userName);
-        if(diary == null) {
-            return false;
+        if(diary != null && diary.getPassword().equals(password)) {
+            currentUser = diary;
+            diary.setLocked(false);
+            return "Login successfully";
         }
-        if(diary.getPassword().equals(password)) {
-            currentDiaryId = diary.getdiaryId();
-            return true;
-        }
-        return false;
-
+        throw new IllegalArgumentException("Invalid username or password");
     }
 
     @Override
-    public void logout() {
-        currentDiaryId = null;
-
+    public String logout() {
+        if(currentUser == null) {
+            return "No user is currently logged in";
+        }
+        currentUser.setLocked(true);
+        currentUser = null;
+        return "Logout successfully";
     }
 
     @Override
-    public void addEntryToDiary(String diaryId, Entry entry) {
-        Diary diary = diaryRepository.findByDiaryId(diaryId).orElse(null);
-        if(diary == null) {
-            throw new IllegalArgumentException("diary does not exist");
-        }
-        if (diary.isLocked()){
-            throw new IllegalArgumentException("diary is locked");
-        }
-
-        diary.getEntries().add(entry);
-        diaryRepository.save(diary);
-
-    }
-
-    @Override
-    public void updateEntryToDiary(String diaryId, String title, String description, int id) {
-        Diary diary = diaryRepository.findByDiaryId(diaryId).orElse(null);
-        if(diary == null) {
-            throw new IllegalArgumentException("diary does not exist");
-        }
-        Optional<Entry> entriesToUpdate = diary.getEntries().stream()
-                .filter(entry -> entry.getId() == id)
-                .findFirst();
-        if(entriesToUpdate.isPresent()) {
-            entriesToUpdate.get().setTitle(title);
-            entriesToUpdate.get().setBody(description);
-            diaryRepository.save(diary);
-        }else{
-            throw new IllegalArgumentException("Entry does not exist");
-        }
-
-    }
-
-
-    @Override
-    public Diary getUserName(String userName) {
-        return diaryRepository.findUserName(userName);
-    }
-
-    @Override
-    public void updateEntry(int diaryId, int entryId, String title, String body) {
-
-    }
-    private String generateDiaryId() {
-        return "diary-"  + (diaryRepository.diaryCount() +1);
-    }
-    public String getDiaryIdByUserName (String userName) {
-        String diaryId = userDiaryId.get(userName);
-        if(diaryId == null){
-            throw new IllegalStateException("no diary id avaliable");
-        }
-        return diaryId;
-    }
-    public String getCurrentDiaryId() {
-        if(currentDiaryId == null) {
-            throw new IllegalStateException("no current diary id avaliable");
-        }
-        return currentDiaryId;
-    }
-    public void unLcockDiary(String userName, String password) {
+    public String addEntryInDiary(String userName,  String title, String body) {
         Diary diary = diaryRepository.findUserName(userName);
-        if(diary != null) {
-            diary.unLock(password);
-            diaryRepository.save(diary);
+        if(diary != null && !diary.isLocked()) {
+            EntryServices entry = new EntryServicesImplementation();
+            entry.createEntry(title,body,generateEntryIdCounter()+1);
+            return "Entry Successfully Created";
+        }
+        throw new IllegalArgumentException("Entries cannot be added to invalid diary");
 
+    }
+
+    @Override
+    public String updateEntryInDiary(String userName, String newTitle, String description) {
+        Diary diary = diaryRepository.findUserName(userName);
+        if (diary != null && !diary.isLocked()) {
+            EntryServices entry = new EntryServicesImplementation();
+            entry.updateEntry(entryIdCounter, newTitle, description);
+            return "Entry Successfully Updated";
+        }
+            throw new IllegalArgumentException("Entries cannot be updated , invalid diary");
+
+    }
+
+
+    @Override
+    public Diary getDiaryByUserName(String userName) {
+        Diary diary = diaryRepository.findUserName(userName);
+        if (diary != null) {
+            return diary;
+        } else {
+            throw new IllegalArgumentException("Diary not found");
         }
     }
+
+
+
+    @Override
+    public String getallEntriesByDiaryId(String diaryId) {
+        return "";
+    }
+
+    @Override
+    public String deleteEntryFromDiaryByTitle(String diaryId, String entryTitle) {
+        return "";
+    }
+
+    @Override
+    public String deleteEntryFromDiaryByEntryId(String diaryId, int entryId) {
+        return "";
+    }
+    public int generateEntryIdCounter() {
+        return entryIdCounter++;
+    }
+
 }
-
-
 

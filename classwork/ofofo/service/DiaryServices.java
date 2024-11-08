@@ -1,16 +1,17 @@
 package service;
 
 import models.Diary;
-import models.Entry;
 
 public interface DiaryServices {
-    void register(String userName, String password);
-    boolean login(String userName, String password);
-    void logout();
+    String register(String userName, String password);
+    String login(String userName, String password);
+    String logout();
 
-    void addEntryToDiary(String diaryId, Entry entry);
-    void updateEntryToDiary(String diaryId, String title, String description,int id);
+    String addEntryInDiary(String userName, String title,String body);//editing here
+    String updateEntryInDiary(String diaryId, String title, String description);
 
-    Diary getUserName(String userName);
-    void updateEntry(int diaryId, int entryId, String title, String body);
+    Diary getDiaryByUserName(String userName);
+    String getallEntriesByDiaryId(String diaryId);
+    String deleteEntryFromDiaryByTitle(String diaryId, String entryTitle);
+    String deleteEntryFromDiaryByEntryId(String diaryId, int entryId);
 }

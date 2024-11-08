@@ -13,6 +13,7 @@ public class Diary {
     private String description;
     private String diaryId;
 
+
     public Diary(String userName, String password) {
         this.userName = userName;
         this.password = password;
@@ -77,4 +78,5 @@ public class Diary {
     public void setdiaryId(String diaryId) {
         this.diaryId = diaryId;
     }
+
 }

@@ -15,107 +15,84 @@ public class DiaryServicesTest {
     @BeforeEach
     public void setUp() {
         diaryServices = new DiaryServiceImplementation();
-
-
+    }
+    @Test
+    public void testIfRegistrationIsSuccessful() {
+        assertEquals("Diary registered successfully", diaryServices.register("testUser","pass1234"));
 
     }
     @Test
-    public void testRegisterDiaryAccount() {
-        diaryServices.register("alice", "correct_password");
-        String diaryId = diaryServices.getDiaryIdByUserName("alice");
-        assertNotNull(diaryId);
-        assertTrue(diaryId.contains("diary-"));
+    public void testIfRegistrationIsNotSuccessful() {
+        diaryServices.register("testUser","pass1234");
+        Exception expection = assertThrows(IllegalArgumentException.class, () -> diaryServices.register("testUser","pass1234"));
+        assertEquals("Username already exists", expection.getMessage());
 
     }
     @Test
-    public void testMutipleRegistrationControlMechanism() {
-        diaryServices.register("alice","correct_password");
-        assertThrows(IllegalArgumentException.class, ()->diaryServices.register("alice","correct_password"));
+    public void testIfLoginIsSuccessful() {
+        diaryServices.register("testUser","pass1234");
+        assertEquals("Login successfully", diaryServices.login("testUser","pass1234"));
+    }
+    @Test
+    public void testIfLoginIsNotSuccessful() {
+        diaryServices.register("testUser","pass1234");
+        Exception expection = assertThrows(IllegalArgumentException.class, () -> diaryServices.login("testUser","pass123"));
+        assertEquals("Invalid username or password", expection.getMessage());
+    }
+    @Test
+    public void testIfTheUserHaveLogoutSuccessfully() {
+        diaryServices.register("testUser","pass1234");
+        diaryServices.login("testUser","pass1234");
+        assertEquals("Logout successfully", diaryServices.logout());
+    }
+    @Test
+    public void testUnSuccessfulLogout() {
+        diaryServices.register("testUser","pass1234");
+        assertEquals("No user is currently logged in", diaryServices.logout());
+    }
+    @Test
+    public void testThatDiaryCanAddEntrySuccessfully() {
+        diaryServices.register("testUser","pass1234");
+        diaryServices.login("testUser","pass1234");
+        assertEquals("Entry Successfully Created", diaryServices.addEntryInDiary("testUser","title","body"));
 
     }
     @Test
-    public void testThatICanRegisterMultipleUsers() {
-        diaryServices.register("alice","correct_password");
-        String diaryId1 =diaryServices.getDiaryIdByUserName("alice");
-        assertNotNull(diaryId1);
-        assertTrue(diaryId1.contains("diary-"));
-        diaryServices.register("john","correct_password");
-        String diaryId2 =diaryServices.getDiaryIdByUserName("john");
-        assertNotNull(diaryId2);
-        assertTrue(diaryId2.contains("diary-"));
+    public void testThatDiaryCannotAddEntryToInvalidUserDiary() {
+        diaryServices.register("testUser","pass1234");
+        diaryServices.login("testUser","pass1234");
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> diaryServices.addEntryInDiary("test","title","body"));
+        assertEquals("Entries cannot be added to invalid diary", exception.getMessage());
+
+        diaryServices.register("testUser2","pass1234");
+        assertThrows(IllegalArgumentException.class, () -> diaryServices.addEntryInDiary("testUser2","title","body"));
     }
-
-   @Test
-    public void testtoAddAnEntryToDiary() {
-       diaryServices.register("james", "correct_password");
-       diaryServices.unLcockDiary("james", "correct_password");
-       String diaryId = diaryServices.getDiaryIdByUserName("james");
-
-       Entry entry = new Entry(1, "First Title", "First Body");
-       diaryServices.addEntryToDiary(diaryId, entry);
-
-       Diary retrivedDiary = diaryServices.getUserName("james");
-       assertNotNull(retrivedDiary);
-       assertEquals(1, retrivedDiary.getEntries().size());
-       assertEquals("First Title", retrivedDiary.getEntries().get(0).getTitle());
-       assertEquals("First Body", retrivedDiary.getEntries().get(0).getBody());
+    @Test
+    public void testThatDiaryCanUpdateEntrySuccessfully() {
+        diaryServices.register("testUser","pass1234");
+        diaryServices.login("testUser","pass1234");
+        diaryServices.addEntryInDiary("testUser","title","body");
+        assertEquals("Entry Successfully Updated", diaryServices.updateEntryInDiary("testUser","New Tittle","New Body"));
 
     }
     @Test
-    public void testLoginWithCorrectCredentials() {
-        diaryServices.register("alice", "correct_password");
-        diaryServices.unLcockDiary("alice", "correct_password");
-        assertTrue(diaryServices.login("alice", "correct_password"));
+    public void testThatInvalidDiaryCannotUpdateEntryToInvalidUserDiary() {
+        diaryServices.register("testUser","pass1234");
+        diaryServices.login("testUser","pass1234");
+       assertEquals("Entry Successfully Created",diaryServices.addEntryInDiary("testUser","title","body"));
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> diaryServices.updateEntryInDiary("test","New Tittle","New Body"));
+        assertEquals("Entries cannot be updated , invalid diary", exception.getMessage());
 
+       diaryServices.register("testUser2","pass1234");
+       Exception exception1 = assertThrows(IllegalArgumentException.class, () -> diaryServices.updateEntryInDiary("testUser2","New title" ,"new body"));
+       assertEquals("Entries cannot be updated , invalid diary", exception1.getMessage());
     }
     @Test
-    public void testLoginWithInCorrectCredentials(){
-        diaryServices.register("alice", "correct_password");
-        diaryServices.unLcockDiary("alice", "correct_password");
-        assertFalse(diaryServices.login("alice", "wrong_password"));
-    }
-    @Test
-    public void testLogout(){
-        diaryServices.register("alice", "correct_password");
-        diaryServices.unLcockDiary("alice", "correct_password");
-        diaryServices.login("alice", "correct_password");
-        diaryServices.logout();
-        assertThrows(IllegalStateException.class, ()->diaryServices.getCurrentDiaryId());
-    }
-    @Test
-    public void testToAddEntriesToALockedDiary() {
-        diaryServices.register("alice", "correct_password");
-        String diaryId = diaryServices.getDiaryIdByUserName("alice");
-        Entry entry = new Entry(1, "First Title", "First Body");
-        assertThrows(IllegalArgumentException.class, ()->diaryServices.addEntryToDiary(diaryId, entry));
-    }
-    @Test
-    public void testToAddEntriesAfterLoggingOut(){
-        diaryServices.register("alice", "correct_password");
-        diaryServices.unLcockDiary("alice", "correct_password");
-        String diaryId = diaryServices.getDiaryIdByUserName("alice");
-        diaryServices.login("alice", "correct_password");
-        diaryServices.logout();
-        Entry entry = new Entry(1, "First Title", "First Body");
-        assertThrows(IllegalStateException.class, ()->diaryServices.addEntryToDiary(diaryId, entry));
-
-    }
-    @Test
-    public void testToAddEntriesAfterLogin(){
-        diaryServices.register("alice", "correct_password");
-        diaryServices.unLcockDiary("alice", "correct_password");
-        String diaryId = diaryServices.getDiaryIdByUserName("alice");
-        diaryServices.login("alice", "correct_password");
-        Entry entry = new Entry(1, "First Title", "First Body");
-        diaryServices.addEntryToDiary(diaryId, entry);
-        diaryServices.updateEntryToDiary(diaryId, "new title","new body",1);
-        Diary retrivedDiary = diaryServices.getUserName("alice");
+    public void testThatDiaryReconizesesEachUserByUserName(){
+        diaryServices.register("testUser","pass1234");
+        Diary retrivedDiary = diaryServices.getDiaryByUserName("testUser");
         assertNotNull(retrivedDiary);
-        assertEquals(1, retrivedDiary.getEntries().size());
-        assertEquals("new title", retrivedDiary.getEntries().get(0).getTitle());
-        assertEquals("new body", retrivedDiary.getEntries().get(0).getBody());
+        assertEquals("testUser",retrivedDiary.getUserName());
     }
-
-
 
 }

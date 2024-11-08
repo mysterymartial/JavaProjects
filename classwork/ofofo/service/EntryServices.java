@@ -7,11 +7,13 @@ import java.util.List;
 
 public interface EntryServices {
 
-void addEntry(Entry entry);
-void updateEntry(Entry entry);
-void deleteEntry(Entry entry);
-List<Entry> getAllEntries();
-Entry getEntryById(int id);
-Entry getEntryByTitle(String title);
-List<Diary> getDiaryByEntryId(int entryId);
+String createEntry(String title, String body,int entryId);
+String updateEntry(int id, String newTitle, String newBody);
+String deleteEntryById(int entryId);
+String getAllEntries();
+String getEntryById(int id);
+String getEntryByTitle(String title);
+String deleteEntryByTitle(String title);
+
+
 }

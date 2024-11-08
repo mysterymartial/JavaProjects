@@ -68,7 +68,10 @@ public class EntryRepositoryImplementation implements EntryRepository {
         return entries;
     }
 
-
+    @Override
+    public void deleteAllEntries() {
+        entries.clear();
+    }
 
 
 }

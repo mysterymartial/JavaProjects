@@ -13,5 +13,6 @@ public interface EntryRepository {
     void deleteById(int id);
     void deleteByTitle(String title);
     List <Entry> findAll();
+    void deleteAllEntries();
 
 }
