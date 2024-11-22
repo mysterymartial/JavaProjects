@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import service.DiaryServiceImplementation;
 import service.DiaryServices;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class DiaryServicesTest {
@@ -94,5 +96,29 @@ public class DiaryServicesTest {
         assertNotNull(retrivedDiary);
         assertEquals("testUser",retrivedDiary.getUserName());
     }
+    @Test
+    public void testTogetAllEntriesInTheDiary(){
+        diaryServices.register("testUser","pass1234");
+        diaryServices.login("testUser","pass1234");
+        diaryServices.addEntryInDiary("testUser","title","body");
+        diaryServices.addEntryInDiary("testUser","title1","body1");
+        List<Entry> entries = diaryServices.getallEntriesByDiaryId("testUser");
+        assertNotNull(entries);
+        assertEquals(2, entries.size());
+        assertEquals("title1",entries.get(0).getTitle());
+    }
+//    @Test
+//    public void testThatDiaryCanDeletedEntrySuccessfullyByTitle() {
+//        diaryServices.register("testUser","pass1234");
+//        diaryServices.login("testUser","pass1234");
+//        diaryServices.addEntryInDiary("testUser","title","fat boy who chop your fries");
+//
+//        String result = diaryServices.deleteEntryFromDiaryByTitle("testUser", "title");
+//
+//        assertEquals("Entry Successfully Deleted", result);
+////        List<Entry> entries = diaryServices.getallEntriesByDiaryId(diaryId);
+////        assertEquals(0, entries.size());
+//
+//    }
 
 }

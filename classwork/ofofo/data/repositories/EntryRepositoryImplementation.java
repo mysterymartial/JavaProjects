@@ -16,7 +16,6 @@ public class EntryRepositoryImplementation implements EntryRepository {
         if (existingEntry != null) {
             updateById(newEntry.getId(), newEntry.getTitle(), newEntry.getBody());
         }else{
-            newEntry.setId(idCounter++);
             entries.add(newEntry);
         }
 

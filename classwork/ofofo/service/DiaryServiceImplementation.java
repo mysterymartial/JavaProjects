@@ -4,13 +4,16 @@ import models.Diary;
 import models.Entry;
 import repositories.DiaryRepository;
 import repositories.DiaryRepositoryImplementation;
+import repositories.EntryRepository;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
 public class DiaryServiceImplementation implements DiaryServices {
     private final DiaryRepository diaryRepository;
+    private final EntryServices entryServices = new EntryServicesImplementation();
     private Diary currentUser = null;
     private int entryIdCounter = 0;
     public DiaryServiceImplementation() {
@@ -87,13 +90,24 @@ public class DiaryServiceImplementation implements DiaryServices {
 
 
     @Override
-    public String getallEntriesByDiaryId(String diaryId) {
-        return "";
+    public List<Entry> getallEntriesByDiaryId(String diaryId) {
+        Diary diary = diaryRepository.findUserName(diaryId);
+        if (diary == null) {
+            throw new IllegalArgumentException("Diary not found");
+        }
+        return diary.getEntries();
     }
 
     @Override
     public String deleteEntryFromDiaryByTitle(String diaryId, String entryTitle) {
-        return "";
+        Diary diary = diaryRepository.findUserName(diaryId);
+        if (diary != null && !diary.isLocked()) {
+            EntryServices entry = new EntryServicesImplementation();
+            entry.deleteEntryByTitle(entryTitle);
+            return "Entry Successfully Deleted";
+        } else {
+            throw new IllegalArgumentException("Entries cannot be deleted , invalid diary or entry title");
+        }
     }
 
     @Override

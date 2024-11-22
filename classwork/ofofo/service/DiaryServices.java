@@ -1,6 +1,9 @@
 package service;
 
 import models.Diary;
+import models.Entry;
+
+import java.util.List;
 
 public interface DiaryServices {
     String register(String userName, String password);
@@ -11,7 +14,7 @@ public interface DiaryServices {
     String updateEntryInDiary(String diaryId, String title, String description);
 
     Diary getDiaryByUserName(String userName);
-    String getallEntriesByDiaryId(String diaryId);
+    List<Entry> getallEntriesByDiaryId(String diaryId);
     String deleteEntryFromDiaryByTitle(String diaryId, String entryTitle);
     String deleteEntryFromDiaryByEntryId(String diaryId, int entryId);
 }
