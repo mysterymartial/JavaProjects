@@ -1,4 +1,4 @@
-package data.model;
+package africa.semicolon.data.model;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

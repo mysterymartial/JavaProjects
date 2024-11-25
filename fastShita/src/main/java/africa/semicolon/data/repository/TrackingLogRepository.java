@@ -1,6 +1,6 @@
-package data.repository;
+package africa.semicolon.data.repository;
 
-import data.model.TrackingLog;
+import africa.semicolon.data.model.TrackingLog;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

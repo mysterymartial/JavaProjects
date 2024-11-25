@@ -1,4 +1,4 @@
-package data.model;
+package africa.semicolon.data.model;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -11,5 +11,5 @@ public class Sender {
 
     @Id
     private String id;
-    private String name;
+    private String fullName;
 }
