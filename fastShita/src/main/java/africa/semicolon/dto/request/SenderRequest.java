@@ -6,6 +6,7 @@ import lombok.Data;
 public class SenderRequest {
     private String fullName;
     private String phoneNumber;
+    private String id;
 
 
 }

@@ -1,9 +1,7 @@
 package africa.semicolon.services;
 
-import africa.semicolon.dto.request.PackageRequestDto;
 import africa.semicolon.dto.request.SenderRequest;
-import africa.semicolon.dto.response.PacakageResponseDto;
-import africa.semicolon.dto.response.SenderResponse;
+import africa.semicolon.dto.responses.SenderResponse;
 
 public interface SenderService {
 
