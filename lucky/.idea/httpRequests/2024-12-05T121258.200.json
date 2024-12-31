@@ -1,0 +1,13 @@
+{
+  "userName": "esther",
+  "password": "1234",
+  "email": "bolarin@gmail.com",
+  "message": "Registration successful",
+  "isLocked": "false",
+  "id": null,
+  "title": null,
+  "description": null,
+  "status": null,
+  "dueDate": null,
+  "activities": []
+}

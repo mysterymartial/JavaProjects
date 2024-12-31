@@ -1,0 +1,6 @@
+{
+  "timestamp": "2024-12-05T10:11:49.874+00:00",
+  "status": 400,
+  "error": "Bad Request",
+  "path": "/api/todo/register"
+}

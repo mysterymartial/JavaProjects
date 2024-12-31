@@ -23,6 +23,10 @@ public class Packages {
     private BigDecimal deliveryFee;
     private int quantity;
     private String description;
-    @DBRef
-    private List<TrackingLog> trackingLogs = new ArrayList<>();
+    private String senderName;
+    private String receiverName;
+    private String senderPhoneNumber;
+    private String receiverPhoneNumber;
+    private String receiverAddress;
+
 }

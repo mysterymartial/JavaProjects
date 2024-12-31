@@ -1,0 +1,24 @@
+public class multiThreadingThing extends Thread{
+    private int threadID;
+    public multiThreadingThing(int threadID) {
+        this.threadID = threadID;
+    }
+    @Override
+    public void run(){
+        for (int count = 0; count <= 10; count++) {
+            System.out.println(count + "from thread threadId " + threadID);
+//            if(threadID % 2 == 0) {
+//                throw new RuntimeException();
+//            }
+
+            try {
+                Thread.sleep(1000);
+
+            } catch (InterruptedException e) {
+
+            }
+
+        }
+
+    }
+}

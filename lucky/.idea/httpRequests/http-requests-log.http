@@ -1,0 +1,328 @@
+POST http://localhost:8080/api/todo/register
+Content-Type: application/json
+Content-Length: 73
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=BA2A5D870385B16223633BB2CD31401C
+
+{
+  "userName": "kkk",
+  "password": "lll",
+  "email": "nola@gmail.com"
+}
+
+<> 2024-12-05T132453.200.json
+
+###
+
+POST http://localhost:8080/api/todo/register
+Content-Type: application/json
+Content-Length: 92
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=A72C5055F853A3604FE0577BF828DBA2
+
+{
+  "userName": "esther",
+  "password": "1234",
+  "email": "bolarin@gmail.com",
+  "id": ""
+}
+
+<> 2024-12-05T121258.200.json
+
+###
+
+POST http://localhost:8080/api/todo/register
+Content-Type: application/json
+Content-Length: 93
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=A72C5055F853A3604FE0577BF828DBA2
+
+{
+  "userName": "mystery",
+  "password": "1234",
+  "email": "bolarin@gmail.com",
+  "id": ""
+}
+
+<> 2024-12-05T121233.400.txt
+
+###
+
+POST http://localhost:8080/api/todo/register
+Content-Type: application/json
+Content-Length: 210
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=A72C5055F853A3604FE0577BF828DBA2
+
+{
+  "userName": "mystery",
+  "password": "1234",
+  "email": "bola@gmail.com",
+  "id": "1",
+  "title": "newPlay",
+  "description": "loml",
+  "status": "completed",
+  "dueDate": "20 october",
+  "activities": []
+}
+
+<> 2024-12-05T111204.400.json
+
+###
+
+POST http://localhost:8080/api/todo/register
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=A72C5055F853A3604FE0577BF828DBA2
+content-length: 0
+
+<> 2024-12-05T111149.400.json
+
+###
+
+POST http://localhost:8080/api/todo/register
+Content-Type: application/json
+Content-Length: 154
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=A72C5055F853A3604FE0577BF828DBA2
+
+{
+  "userName": "",
+  "password": "",
+  "email": "",
+  "id": "",
+  "title": "",
+  "description": "",
+  "status": "",
+  "dueDate": "",
+  "activities": []
+}
+
+<> 2024-12-05T083514.400.txt
+
+###
+
+POST http://localhost:8080/api/todo/register
+Content-Type: application/json
+Content-Length: 210
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=A72C5055F853A3604FE0577BF828DBA2
+
+{
+  "userName": "mystery",
+  "password": "1234",
+  "email": "bola@gmail.com",
+  "id": "1",
+  "title": "newPlay",
+  "description": "loml",
+  "status": "completed",
+  "dueDate": "20 october",
+  "activities": []
+}
+
+<> 2024-12-05T080029.400.json
+
+###
+
+POST http://localhost:8080/api/todo/register
+Content-Type: application/json
+Content-Length: 154
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=A72C5055F853A3604FE0577BF828DBA2
+
+{
+  "userName": "",
+  "password": "",
+  "email": "",
+  "id": "",
+  "title": "",
+  "description": "",
+  "status": "",
+  "dueDate": "",
+  "activities": []
+}
+
+<> 2024-12-05T015719.400.txt
+
+###
+
+POST http://localhost:8080/api/todo/register
+Content-Type: application/json
+Content-Length: 210
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=A72C5055F853A3604FE0577BF828DBA2
+
+{
+  "userName": "mystery",
+  "password": "1234",
+  "email": "bola@gmail.com",
+  "id": "1",
+  "title": "newPlay",
+  "description": "loml",
+  "status": "completed",
+  "dueDate": "20 october",
+  "activities": []
+}
+
+<> 2024-12-05T015554.400.json
+
+###
+
+POST http://localhost:8080/api/todo/register
+Content-Type: application/json
+Content-Length: 210
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=A72C5055F853A3604FE0577BF828DBA2
+
+{
+  "userName": "mystery",
+  "password": "1234",
+  "email": "bola@gmail.com",
+  "id": "1",
+  "title": "newPlay",
+  "description": "loml",
+  "status": "completed",
+  "dueDate": "20 october",
+  "activities": []
+}
+
+<> 2024-12-05T014834.400.json
+
+###
+
+POST http://localhost:8080/api/todo/register
+Content-Type: application/json
+Content-Length: 210
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=A72C5055F853A3604FE0577BF828DBA2
+
+{
+  "userName": "mystery",
+  "password": "1234",
+  "email": "bola@gmail.com",
+  "id": "1",
+  "title": "newPlay",
+  "description": "loml",
+  "status": "completed",
+  "dueDate": "20 october",
+  "activities": []
+}
+
+<> 2024-12-05T014819.400.json
+
+###
+
+POST http://localhost:8080/api/todo/register
+Content-Type: application/json
+Content-Length: 208
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userName": "mystery",
+  "password": "1234",
+  "email": "bolasax16@gmail.com",
+  "id": "1",
+  "title": "boy",
+  "description": "i hate boys",
+  "status": "completed",
+  "dueDate": "",
+  "activities": []
+}
+
+<> 2024-12-05T014521.200.json
+
+###
+
+POST http://localhost:8080/api/todo/register
+Content-Type: application/json
+Content-Length: 154
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userName": "",
+  "password": "",
+  "email": "",
+  "id": "",
+  "title": "",
+  "description": "",
+  "status": "",
+  "dueDate": "",
+  "activities": []
+}
+
+<> 2024-12-05T014521.400.txt
+
+###
+
+POST http://localhost:8080/api/todo/register
+Content-Type: application/json
+Content-Length: 224
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userName": "mystery",
+  "password": "1234",
+  "email": "bolasax16@gmail.com",
+  "id": "1",
+  "title": "boy",
+  "description": "i hate boys",
+  "status": "completed",
+  "dueDate": "12:00",
+  "activities": ["am hungry"]
+}
+
+<> 2024-12-05T014521.400.json
+
+###
+
+POST http://localhost:8080/api/todo/register
+Content-Type: application/json
+Content-Length: 154
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userName": "",
+  "password": "",
+  "email": "",
+  "id": "",
+  "title": "",
+  "description": "",
+  "status": "",
+  "dueDate": "",
+  "activities": []
+}
+
+<> 2024-12-05T014510.400.txt
+
+###
+

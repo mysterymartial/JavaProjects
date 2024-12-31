@@ -11,4 +11,11 @@ public class PackageRequestDto {
     private BigDecimal deliveryFee; // The delivery fee for the package
     private int quantity;          // Number of items in the package
     private String description;
+    private String senderName;
+    private String receiverName;
+    private String senderPhoneNumber;
+    private String receiverPhoneNumber;
+    private String receiverAddress;
+
+
 }
