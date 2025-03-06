@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "message": "Registration successful",
+  "data": {
+    "userName": "boy",
+    "password": "$2a$10$8Lc0DnPIySy7Kb.8neuKA.F4Kl6VGBEPx0.ISuwsd0lt875QViRVa",
+    "email": "boy@gmail.com",
+    "message": "Registration successful",
+    "isLocked": "false",
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6ImJveSIsImVtYWlsIjoiYm95QGdtYWlsLmNvbSIsInN1YiI6ImJveSIsImlhdCI6MTczNzU0ODEwNCwiZXhwIjoxNzM3NjM0NTA0fQ.flRCGEV7AcgULRNaGldG2yEZ15d4vg5s1xHYCtNjQJ4",
+    "activities": []
+  }
+}

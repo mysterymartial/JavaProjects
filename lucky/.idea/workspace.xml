@@ -5,66 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e328e50e-716c-4542-9f47-8c3dd66f713e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../fastShita/src/main/java/africa/semicolon/data/model/Packages.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fastShita/src/main/java/africa/semicolon/data/model/Packages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fastShita/src/main/java/africa/semicolon/dto/request/PackageRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fastShita/src/main/java/africa/semicolon/dto/request/PackageRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fastShita/src/main/java/africa/semicolon/dto/request/ReceiverRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fastShita/src/main/java/africa/semicolon/dto/request/ReceiverRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fastShita/src/main/java/africa/semicolon/dto/responses/PacakageResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fastShita/src/main/java/africa/semicolon/dto/responses/PacakageResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fastShita/src/main/java/africa/semicolon/services/ReceiverServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fastShita/src/main/java/africa/semicolon/services/ReceiverServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/myjava.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/src/country/GeoPolitical.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/src/country/NorthCentral.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/src/country/NorthEast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/src/country/NorthWest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/src/country/SouthEast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/src/country/SouthSouth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/src/country/SouthWest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/src/dataStructure/ArrayList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/src/dataStructure/Queue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/src/dataStructure/Stack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/src/poly/Aplicant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/src/poly/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/src/poly/ScholarshipStudent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/src/poly/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/src/poly/loanstudent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/src/problem/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/src/problem/Problem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/src/problem/Type.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/src/survey/Survey.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/test/country/GeoPoliticalTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/test/dataStructure/ArrayListTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/test/dataStructure/QueueTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/test/dataStructure/StackTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/test/problem/PersonTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/test/problem/ProblemTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/myjava/test/survey/SurveyTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/star_game/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/star_game/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/star_game/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/star_game/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/star_game/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/star_game/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/star_game/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/star_game/src/game/StarGame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/star_game/src/game/Turtule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/star_game/star_game.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/star_game/test/StarGameTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/star_game/test/game/TurtuleTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/untitled/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/untitled/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/untitled/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/untitled/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/untitled/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/untitled/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myjava/untitled/untitled.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ofofo/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ofofo/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../praticing dummy/src/CustomExpectionPratice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../praticing dummy/src/CustomExpectionPratice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../praticing dummy/src/InvalidAgeExpection.java" beforeDir="false" afterPath="$PROJECT_DIR$/../praticing dummy/src/InvalidAgeExpection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../toDoApp/lucky/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../toDoApp/lucky/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/controller/ToDoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/controller/ToDoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/data/model/ToDoEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/data/model/ToDoEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/dto/response/ToDoEntryResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/dto/response/ToDoEntryResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/dto/response/ToDoResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/dto/response/ToDoResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/service/ToDoEntryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/service/ToDoEntryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/service/ToDoEntryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/service/ToDoEntryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/service/ToDoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/service/ToDoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/service/ToDoServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/service/ToDoServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/util/GlobalExpectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/config/GlobalExpectionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/util/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../toDoApp/lucky/src/test/java/africa/pk/service/ToDoEntryServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../toDoApp/lucky/src/test/java/africa/pk/service/ToDoEntryServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../toDoApp/lucky/src/test/java/africa/pk/service/ToDoServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../toDoApp/lucky/src/test/java/africa/pk/service/ToDoServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +54,9 @@
     &quot;accountId&quot;: &quot;3c087bac-7651-4ef4-b2fa-39f3be19299d&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -113,12 +73,20 @@
     &quot;HTTP Request.generated-requests | #16.executor&quot;: &quot;Run&quot;,
     &quot;HTTP Request.generated-requests | #20.executor&quot;: &quot;Run&quot;,
     &quot;HTTP Request.generated-requests | #21.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #24.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #25.executor&quot;: &quot;Run&quot;,
     &quot;HTTP Request.generated-requests | #3.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #32.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #35.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #37.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #38.executor&quot;: &quot;Run&quot;,
     &quot;HTTP Request.generated-requests | #4.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #40.executor&quot;: &quot;Run&quot;,
     &quot;HTTP Request.generated-requests | #6.executor&quot;: &quot;Run&quot;,
     &quot;HTTP Request.generated-requests | #7.executor&quot;: &quot;Run&quot;,
     &quot;HTTP Request.generated-requests | #8.executor&quot;: &quot;Run&quot;,
     &quot;HTTP Request.generated-requests | #9.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ToDoEntryServiceImplTest.createToDoList_ValidRequest_ReturnsResponseDto.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.ToDoEntryServiceImplTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.ToDoEntryServiceImplTest.testCreateToDoList.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.ToDoEntryServiceImplTest.testCreateToDoList_ShouldThrowException_WhenDescriptionIsNull.executor&quot;: &quot;Run&quot;,
@@ -173,6 +141,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\DELL\Desktop\toDoApp\lucky\src\main\java\africa\pk\config" />
       <recent name="C:\Users\DELL\Desktop\toDoApp" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -183,17 +152,54 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Main">
-    <configuration name="generated-requests | #16" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="16" requestIdentifier="#16" runType="Run single request">
+    <configuration name="generated-requests | #40" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="40" requestIdentifier="#40" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests | #20" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="20" requestIdentifier="#20" runType="Run single request">
-      <method v="2" />
+    <configuration name="ToDoEntryServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="toDoApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.pk.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.pk.service" />
+      <option name="MAIN_CLASS_NAME" value="africa.pk.service.ToDoEntryServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="generated-requests | #21" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="21" requestIdentifier="#21" runType="Run single request">
-      <method v="2" />
+    <configuration name="ToDoEntryServiceImplTest.createToDoList_ValidRequest_ReturnsResponseDto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="toDoApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.pk.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.pk.service" />
+      <option name="MAIN_CLASS_NAME" value="africa.pk.service.ToDoEntryServiceImplTest" />
+      <option name="METHOD_NAME" value="createToDoList_ValidRequest_ReturnsResponseDto" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="generated-requests | #24" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="24" requestIdentifier="#24" runType="Run single request">
-      <method v="2" />
+    <configuration name="ToDoServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="toDoApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.pk.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.pk.service" />
+      <option name="MAIN_CLASS_NAME" value="africa.pk.service.ToDoServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="toDoApp" />
@@ -211,10 +217,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.Main" />
-        <item itemvalue="HTTP Request.generated-requests | #24" />
-        <item itemvalue="HTTP Request.generated-requests | #21" />
-        <item itemvalue="HTTP Request.generated-requests | #20" />
-        <item itemvalue="HTTP Request.generated-requests | #16" />
+        <item itemvalue="JUnit.ToDoServiceImplTest" />
+        <item itemvalue="JUnit.ToDoEntryServiceImplTest" />
+        <item itemvalue="JUnit.ToDoEntryServiceImplTest.createToDoList_ValidRequest_ReturnsResponseDto" />
+        <item itemvalue="HTTP Request.generated-requests | #40" />
       </list>
     </recent_temporary>
   </component>
@@ -248,6 +254,32 @@
       <workItem from="1733541776154" duration="832000" />
       <workItem from="1733741850921" duration="92000" />
       <workItem from="1734766333144" duration="305000" />
+      <workItem from="1735621497403" duration="622000" />
+      <workItem from="1736340127925" duration="1863000" />
+      <workItem from="1736411168882" duration="2988000" />
+      <workItem from="1736780269727" duration="1182000" />
+      <workItem from="1736785798251" duration="1051000" />
+      <workItem from="1736788225824" duration="787000" />
+      <workItem from="1736822377513" duration="7347000" />
+      <workItem from="1736844269968" duration="1698000" />
+      <workItem from="1736879510289" duration="2325000" />
+      <workItem from="1736932396060" duration="2190000" />
+      <workItem from="1736994760735" duration="5374000" />
+      <workItem from="1737013571877" duration="8910000" />
+      <workItem from="1737076094662" duration="11614000" />
+      <workItem from="1737100207384" duration="12004000" />
+      <workItem from="1737176318530" duration="1682000" />
+      <workItem from="1737248657771" duration="1204000" />
+      <workItem from="1737301197950" duration="643000" />
+      <workItem from="1737547689009" duration="4623000" />
+      <workItem from="1737626031785" duration="1220000" />
+      <workItem from="1737636320448" duration="19000" />
+      <workItem from="1738549164036" duration="7913000" />
+      <workItem from="1738601455677" duration="758000" />
+      <workItem from="1740651828525" duration="41000" />
+      <workItem from="1740665624909" duration="15000" />
+      <workItem from="1740860846339" duration="32000" />
+      <workItem from="1741103071596" duration="32000" />
     </task>
     <servers />
   </component>
@@ -257,23 +289,10 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/controller/ToDoController.java</url>
-          <line>21</line>
-          <properties class="africa.pk.controller.ToDoController" method="register">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/controller/ToDoController.java</url>
-          <line>40</line>
-          <properties class="africa.pk.controller.ToDoController" method="login">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="4" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../../toDoApp/lucky/src/main/java/africa/pk/service/ToDoServiceImpl.java</url>
+          <line>237</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

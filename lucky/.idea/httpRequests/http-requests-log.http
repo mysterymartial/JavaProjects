@@ -1,3 +1,231 @@
+POST http://localhost:8080/api/v1/todo/register
+Content-Type: application/json
+Content-Length: 76
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=2BC614EACF3BA55AD8532475B40E0527
+
+{
+  "userName": "boy",
+  "password": "1234567",
+  "email": "boy@gmail.com"
+}
+
+<> 2025-01-22T132444.400.json
+
+###
+
+POST http://localhost:8080/api/v1/todo/register
+Content-Type: application/json
+Content-Length: 76
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=2BC614EACF3BA55AD8532475B40E0527
+
+{
+  "userName": "boy",
+  "password": "1234567",
+  "email": "boy@gmail.com"
+}
+
+<> 2025-01-22T131505.201.json
+
+###
+
+POST http://localhost:8080/api/v1/todo/add/activity
+Content-Type: application/json
+Content-Length: 136
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=2BC614EACF3BA55AD8532475B40E0527
+
+{
+  "id": "6789c941de26c86172ccb56f",
+  "userName": "meenah",
+  "title": "hunger",
+  "description": "am hungry",
+  "status": "PENDING"
+}
+
+###
+
+POST http://localhost:8080/api/v1/todo/login
+Content-Type: application/json
+Content-Length: 83
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=B550BDBAF1DE275E8166BC935E58C3D9
+
+{
+  "userName": "meenah",
+  "password": "123456",
+  "email": "happyboy@yahoo.com"
+}
+
+<> 2025-01-17T093254.200.json
+
+###
+
+POST http://localhost:8080/api/v1/todo/add/activity
+Content-Type: application/json
+Content-Length: 134
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=B550BDBAF1DE275E8166BC935E58C3D9
+
+{
+  "id": "678a0e6d91f44028827c1b4d",
+  "userName": "moon",
+  "title": "hunger",
+  "description": "am hungry",
+  "status": "PENDING"
+}
+
+###
+
+POST http://localhost:8080/api/v1/todo/login
+Content-Type: application/json
+Content-Length: 83
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=59EC829A95A35CA7C8D1E2F8A8BA1DDB
+
+{
+  "userName": "meenah",
+  "password": "123456",
+  "email": "happyboy@yahoo.com"
+}
+
+<> 2025-01-17T065742.200.json
+
+###
+
+POST http://localhost:8080/api/todo/add/activity
+Content-Type: application/json
+Content-Length: 142
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=59EC829A95A35CA7C8D1E2F8A8BA1DDB
+
+{
+  "id": "6785d9423ad7861ceaff1a58",
+  "userName": "sarah",
+  "title": "money",
+  "description": " i need money",
+  "status": "uncompleted"
+}
+
+<> 2025-01-16T062221.403.txt
+
+###
+
+POST http://localhost:8080/api/todo/add/activity
+Content-Type: text/plain
+Content-Length: 142
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=59EC829A95A35CA7C8D1E2F8A8BA1DDB
+
+{
+  "id": "6785d9423ad7861ceaff1a58",
+  "userName": "sarah",
+  "title": "money",
+  "description": " i need money",
+  "status": "uncompleted"
+}
+
+<> 2025-01-16T061826.415.json
+
+###
+
+POST http://localhost:8080/api/todo/add/activity
+Content-Type: application/json
+Content-Length: 142
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=007E0460EF35D82A98C67BBB45729C13
+
+{
+  "id": "6785d9423ad7861ceaff1a58",
+  "userName": "sarah",
+  "title": "money",
+  "description": " i need money",
+  "status": "uncompleted"
+}
+
+<> 2025-01-16T061726.403.txt
+
+###
+
+POST http://localhost:8080/api/todo/add/activity
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=007E0460EF35D82A98C67BBB45729C13
+content-length: 0
+
+<> 2025-01-14T101310.400.json
+
+###
+
+POST http://localhost:8080/api/todo/add/activity
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=007E0460EF35D82A98C67BBB45729C13
+content-length: 0
+
+<> 2025-01-14T100959.400.json
+
+###
+
+POST http://localhost:8080/api/todo/login
+Content-Type: application/json
+Content-Length: 63
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=007E0460EF35D82A98C67BBB45729C13
+
+{
+  "userName": "esther",
+  "password": "1234",
+  "email": ""
+}
+
+<> 2025-01-14T100746-1.400.txt
+
+###
+
+POST http://localhost:8080/api/todo/register
+Content-Type: application/json
+Content-Length: 53
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.0.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=007E0460EF35D82A98C67BBB45729C13
+
+{
+  "userName": "",
+  "password": "",
+  "email": ""
+}
+
+<> 2025-01-14T100746.400.txt
+
+###
+
 POST http://localhost:8080/api/todo/register
 Content-Type: application/json
 Content-Length: 73
